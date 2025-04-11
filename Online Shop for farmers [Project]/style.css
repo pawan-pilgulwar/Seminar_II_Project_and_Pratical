@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+/* Utility Classes */
+.display-menu {
+    display: none;
+}
+
+
+/* making webpage structure using css grids */
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "content menu"
+        "footer footer";
+    grid-template-columns: 3fr 0.7fr;
+    grid-template-rows: 0.2fr 3fr 0.4fr;
+    grid-auto-flow: row;
+    /* gap: 5px; */
+}
+
+/* .container-item {
+    border: 3px solid black;
+} */
+
+.header {
+    background-color: rgb(70, 71, 71);
+    grid-area: header;
+    grid-column: 1 / 3;
+}
+
+.content {
+    grid-area: content;
+    background-color: lightcoral;
+    grid-column: 1 / 3;
+}
+
+.menu {
+    grid-area: menu;
+    grid-row: 1 / 3;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    z-index: 20;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightslategray;
+}
+
+
+/* Eaditing Navbar */
+#navbar , #navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+#navbar ul li {
+    list-style: none;
+    padding: 0px 20px;
+    margin: auto 0px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-buttons {
+    margin: auto 5px;
+}
+
+.nav-buttons button {
+    color: white;
+    background-color: #150e3c;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: auto 0px;
+    margin-right: 10px;
+}
+
+.search button {
+    color: white;
+    background-color: #150e3c;
+    border: 1px solid black;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: auto 0px;
+    margin-right: 10px;
+    margin-left: -3.5px;
+}
+
+.search input {
+    border: 1px solid black;
+    padding: 5px 15px;
+    width: 20rem;
+    margin: auto 0px;
+}
+
+.nav-buttons button a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+}
+
+.search {
+    margin-left: 40px;
+}
+
+
+/* Side Panal Designing */
+.side-panal {
+    padding-left: 20px;
+    background-color: black;
+    width: 100%;
+;
+}
+
+.side-panal ul {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* align-items: center; */
+    color: white;
+}
+
+.side-panal ul li {
+    list-style: none;
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    margin: 0px 20px;
+}
+
+#menu-button {
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: auto 0px;
+}
+
+
+/* Content Menu desaigning */
+
+.content-menu {
+    color: white;
+    padding: 2px 0px;
+    background-color: rgb(111 107 107);
+}
+
+.content-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-menu ul li {
+    list-style: none;
+    padding: 0px 25px;
+    font-size: 1.5rem;
+}
